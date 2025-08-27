@@ -1,5 +1,6 @@
 import React from 'react';
 import './Appointments.css';
+import ReviewForm from '../ReviewForm/ReviewForm';
 
 const Appointments = () => {
   return (
@@ -15,6 +16,13 @@ const Appointments = () => {
             <li>Cancel or reschedule appointments</li>
             <li>View appointment history</li>
           </ul>
+        </div>
+        
+        {/* Review Form Section */}
+        <div className="review-section">
+          <h2>Review Your Consultation</h2>
+          <p>Share your experience with your recent consultation to help other patients make informed decisions.</p>
+          <ReviewForm />
         </div>
       </div>
     </div>
