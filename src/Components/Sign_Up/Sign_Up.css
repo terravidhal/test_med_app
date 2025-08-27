@@ -89,19 +89,39 @@
     border-radius: 4px; /* Add border radius for rounded corners */
 }
 
+/* Styles for form controls with error state */
+.form-control.error {
+    border-color: #dc3545; /* Red border for error state */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.3); /* Red shadow for error state */
+}
+
+/* Styles for error messages */
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    font-size: 14px; /* Smaller font size for error messages */
+    margin-top: 5px; /* Top margin for spacing */
+    display: block; /* Display as block element */
+    font-weight: 500; /* Medium font weight */
+}
+
 /* Styles for button group in the signup form */
 .btn-group {
     margin-top: .0001px; /* Add a small top margin to button group */
     margin-bottom: 20px; /* Add bottom margin to button group */
+    display: flex; /* Use flexbox for button layout */
+    gap: 10px; /* Space between buttons */
+    width: 40%; /* Same width as form controls */
 }
 
 /* Styles for buttons in the signup form */
 .btn {
+    flex: 1; /* Make buttons take equal space */
     padding: 10px 20px; /* Set padding for buttons */
     font-size: 16px; /* Set font size for buttons */
     border: none; /* Remove button borders */
     border-radius: 4px; /* Add border radius for rounded corners */
     cursor: pointer; /* Change cursor to pointer on hover */
+    width: 100%; /* Full width within flex container */
 }
 
 /* Styles for primary button in the signup form */

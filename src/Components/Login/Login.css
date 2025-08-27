@@ -27,19 +27,39 @@
     border-radius: 4px; /* Border radius for rounded corners */
 }
 
+/* Styles for form controls with error state */
+.form-control.error {
+    border-color: #dc3545; /* Red border for error state */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.3); /* Red shadow for error state */
+}
+
+/* Styles for error messages */
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    font-size: 14px; /* Smaller font size for error messages */
+    margin-top: 5px; /* Top margin for spacing */
+    display: block; /* Display as block element */
+    font-weight: 500; /* Medium font weight */
+}
+
 /* Styles for button groups */
 .btn-group {
     margin-top: .0001px; /* Top margin for spacing above button groups */
     margin-bottom: 20px; /* Bottom margin for spacing below button groups */
+    display: flex; /* Use flexbox for button layout */
+    gap: 10px; /* Space between buttons */
+    width: 40%; /* Same width as form controls */
 }
 
 /* Styles for buttons */
 .btn {
+    flex: 1; /* Make buttons take equal space */
     padding: 10px 20px; /* Padding inside buttons */
     font-size: 16px; /* Font size of buttons */
     border: none; /* No border for buttons */
     border-radius: 4px; /* Border radius for rounded corners on buttons */
     cursor: pointer; /* Cursor style on hover for buttons */
+    width: 100%; /* Full width within flex container */
 }
 
 /* Styles for primary buttons */

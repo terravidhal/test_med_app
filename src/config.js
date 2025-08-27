@@ -1,10 +1,2 @@
-//export const API_URL = window.location.hostname === "localhost" ? "<add your theia server side url>" : "add your theia server side url";
-
-export const API_URL = window.location.hostname === "localhost" 
-  ? "http://localhost:8181" 
-  : "http://localhost:8181";
-
-console.log(
-    "API_URL :",
-    API_URL
-);
+// Configuration file for API endpoints
+export const API_URL = 'http://localhost:5000';
