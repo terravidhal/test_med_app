@@ -17,6 +17,10 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
   const handleCancel = (appointmentId) => {
     const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
     setAppointments(updatedAppointments);
+    
+    // Clear appointment data from localStorage when cancelled
+    localStorage.removeItem(name);
+    localStorage.removeItem('doctorData');
   };
 
   const handleFormSubmit = (appointmentData) => {
@@ -27,6 +31,23 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
     setShowModal(false);
+    
+    // Store doctor data in localStorage for Notification component
+    const doctorData = {
+      name: name,
+      speciality: speciality,
+      experience: experience,
+      ratings: ratings
+    };
+    localStorage.setItem('doctorData', JSON.stringify(doctorData));
+    
+    // Store appointment data in localStorage using doctor's name as key
+    localStorage.setItem(name, JSON.stringify(appointmentData));
+    
+    // Trigger page reload to show notification
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (

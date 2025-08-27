@@ -1,0 +1,168 @@
+/* Notification container styles */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Appointment card styles */
+.appointment-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Animation for notification appearance */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Appointment card content styles */
+.appointment-card__content {
+  padding: 24px;
+  color: white;
+}
+
+/* Appointment card title styles */
+.appointment-card__title {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+}
+
+/* Appointment card message styles */
+.appointment-card__message {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.appointment-card__message strong {
+  color: white;
+  font-weight: 600;
+}
+
+/* Appointment card actions container */
+.appointment-card__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Button base styles */
+.appointment-card__cancel-btn,
+.appointment-card__dismiss-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+/* Cancel appointment button styles */
+.appointment-card__cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.appointment-card__cancel-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Dismiss button styles */
+.appointment-card__dismiss-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.appointment-card__dismiss-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .notification-container {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+  
+  .appointment-card__content {
+    padding: 20px;
+  }
+  
+  .appointment-card__title {
+    font-size: 1.3rem;
+  }
+  
+  .appointment-card__actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .appointment-card__cancel-btn,
+  .appointment-card__dismiss-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Animation for notification removal */
+.appointment-card.removing {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Success state for appointment confirmation */
+.appointment-card.success {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+/* Warning state for appointment cancellation */
+.appointment-card.warning {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+/* Error state for appointment issues */
+.appointment-card.error {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+} 
