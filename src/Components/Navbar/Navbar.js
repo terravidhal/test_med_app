@@ -42,6 +42,11 @@ const Navbar = () => {
     navigate('/appointments');
   };
 
+  const handleInstantConsultationClick = () => {
+    // Navigate to instant consultation page
+    navigate('/instant-consultation');
+  };
+
   const handleSignUpClick = () => {
     navigate('/signup');
   };
@@ -105,6 +110,10 @@ const Navbar = () => {
         {/* List item for the 'Appointments' link */}
         <li className="link">
           <Link to="/appointments" onClick={handleAppointmentsClick}>Appointments</Link>
+        </li>
+        {/* List item for the 'Instant Booking Consultation' link */}
+        <li className="link">
+          <Link to="/instant-consultation" onClick={handleInstantConsultationClick}>Instant Booking Consultation</Link>
         </li>
         
         {/* Conditional rendering based on login status - Toggle Login/Logout */}
