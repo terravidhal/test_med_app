@@ -1,0 +1,88 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 300
+>>
+stream
+BT
+/F1 16 Tf
+72 720 Td
+(StayHealthy Medical Report) Tj
+0 -30 Td
+/F1 12 Tf
+(Blood Test Report) Tj
+0 -25 Td
+(Patient: John Doe) Tj
+0 -20 Td
+(Date: January 15, 2024) Tj
+0 -20 Td
+(Doctor: Dr. Sarah Johnson) Tj
+0 -30 Td
+(Test Results:) Tj
+0 -20 Td
+(• Hemoglobin: 14.2 g/dL (Normal: 12-16)) Tj
+0 -20 Td
+(• White Blood Cells: 7,500/μL (Normal: 4,500-11,000)) Tj
+0 -20 Td
+(• Platelets: 250,000/μL (Normal: 150,000-450,000)) Tj
+0 -20 Td
+(• Blood Sugar: 95 mg/dL (Normal: 70-100)) Tj
+0 -30 Td
+(Conclusion: All values within normal range) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000300 00000 n 
+0000000390 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+480
+%%EOF 

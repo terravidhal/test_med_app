@@ -6,6 +6,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     // Check if user is logged in using sessionStorage
@@ -64,10 +65,25 @@ const Navbar = () => {
     
     setIsLoggedIn(false);
     setUserName('');
+    setShowDropdown(false);
     
     // Navigate to home page
     navigate('/');
     window.location.reload();
+  };
+
+  const handleProfileClick = () => {
+    navigate('/profile');
+    setShowDropdown(false);
+  };
+
+  const handleReportsClick = () => {
+    navigate('/reports');
+    setShowDropdown(false);
+  };
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
   };
 
   return (
@@ -119,15 +135,28 @@ const Navbar = () => {
         {/* Conditional rendering based on login status - Toggle Login/Logout */}
         {isLoggedIn ? (
           <>
-            {/* Display user name extracted from email */}
-            <li className="link">
-              <span style={{ color: '#3685fb', fontWeight: 'bold' }}>
-                Welcome, {userName}!
+            {/* Display user name with dropdown */}
+            <li className="link dropdown-container">
+              <span 
+                style={{ color: '#3685fb', fontWeight: 'bold', cursor: 'pointer' }}
+                onClick={toggleDropdown}
+              >
+                Welcome, {userName}! ▼
               </span>
-            </li>
-            {/* List item for the 'Logout' link with a button */}
-            <li className="link">
-              <button className="btn1" onClick={handleLogout}>Logout</button>
+              {showDropdown && (
+                <div className="dropdown-menu">
+                  <div className="dropdown-item" onClick={handleProfileClick}>
+                    👤 Profile
+                  </div>
+                  <div className="dropdown-item" onClick={handleReportsClick}>
+                    📋 Your Reports
+                  </div>
+                  <div className="dropdown-divider"></div>
+                  <div className="dropdown-item" onClick={handleLogout}>
+                    🚪 Logout
+                  </div>
+                </div>
+              )}
             </li>
           </>
         ) : (

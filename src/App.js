@@ -10,6 +10,8 @@ import Login from './Components/Login/Login';
 import Sign_Up from './Components/Sign_Up/Sign_Up';
 import Appointments from './Components/Appointments/Appointments';
 import BookingConsultation from './Components/BookingConsultation/BookingConsultation';
+import ProfileCard from './Components/ProfileCard/ProfileCard';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout';
 import Notification from './Components/Notification/Notification';
 
 // Function component for the main App
@@ -30,6 +32,8 @@ function App() {
             <Route path="/signup" element={<Sign_Up />} />
             <Route path="/appointments" element={<Appointments />} />
             <Route path="/booking-consultation" element={<BookingConsultation />} />
+            <Route path="/profile" element={<ProfileCard />} />
+            <Route path="/reports" element={<ReportsLayout />} />
           </Routes>
         </Notification>
       </BrowserRouter>
